@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
-    <script src="script.js"></script>
-    <title>My test page</title>
+    <title>JavaScript przykład</title>
   </head>
   <body>
-    <p>This is my page</p>
+    <button>Click me</button>
+  
+  <script>
+
+  // Kod JavaScript będzie tu umieszczony.
+	function stworzParagraf() 
+	{
+		var para = document.createElement('p');
+		para.textContent = 'Kliknąłeś przycisk!';
+		document.body.appendChild(para);
+	}
+
+	var przyciski = document.querySelectorAll('button');
+
+	for (var i = 0; i < przyciski.length ; i++) 
+	{
+		przyciski[i].addEventListener('click', stworzParagraf);
+	}
+  </script>
   
   </body>
 </html>
